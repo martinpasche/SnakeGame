@@ -2,6 +2,9 @@ snakeEnv/*
 snakeEnv
 SnakeEnv/
 
+snakeEnv/*
+.snakeEnv
+SnakeEnv/
 
 *.pyc
 db.sqlite3
