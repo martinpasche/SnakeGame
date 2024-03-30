@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import '~bootstrap/scss/bootstrap';
+
+* {
+    box-sizing: border-box;
+    //border: 1px solid white;
+}
+
+
+
+$white: white;
+$gray: rgb(40, 10, 70);
+$red: red;
+$green: rgb(55, 255, 55);
+
+$cell-height-width: calc(50vw / 16);
+$cell-max-height-width: calc(60vh / 16);
+
+
+//No scroll
+body, html {
+    overflow: hidden;   
+    font-size: 62.5%;
+}
+
+
+
+
+body{
+    background-color: black;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.f-center {
+    justify-content: center;
+}
+
+.f-vertical {
+    flex-direction: column;
+}
+
+.page {
+    color: $white;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 100%;
+
+    .side-flex-column {
+        width: 20vw;
+    }
+    
+    .main-flex-column {
+        width: 50vw;
+    }
+}
+
+.page h1 {
+    font-size: 7rem;
+}
+
+
+.leadership-board {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.leadership-board h2 {
+    font-size: 3.5rem;
+}
+
+.leadership-board h3 {
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+
+
+.table-leadership {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.table-leadership-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    p, h3 {
+        width: 30rem;
+        text-align: center;
+    }
+}
+
+
+
+
+.points {
+    text-align: center;
+    font-size: 4rem;
+}
+
+
+
+.main-game-column {
+    font-size: 6rem;
+    font-family: 'press start 2p';
+    text-align: center;
+
+    .game-grid {
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);  
+        gap:0;
+        max-width: 700px;
+        justify-content: center;
+        margin: 0 auto;
+
+        
+        .game-grid-cell {
+            //background-color: aqua;
+            width: 100%; 
+            padding-top: 100%;
+            position: relative;
+            border: 1px solid $gray;
+
+
+            .apple {
+                width: 50%;
+                height: 50%;
+                border-radius: 50%;
+                background-color: $red;
+                z-index: 1;
+                position: absolute;
+                top: 25%;
+                left: 25%;
+            }
+
+            .snake {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 10%;
+                background-color: $green;
+                width: 100%;
+                height: 100%;
+
+
+            }
+        }
+    }
+}
+
+
+.dialog {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: 4;
+
+
+
+    .dialog-screen {
+
+        z-index: 5;
+        text-align: center;
+        padding: 5rem;
+        border: 3px solid $gray;
+        border-radius: 1rem;
+
+        h2 {
+            font-family: 'press start 2p';
+            font-size: 9rem;
+            color: $red;
+        }
+
+        .flex-text {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        p {
+            font-size: 3.5rem;
+            color: $white;
+            margin: 4rem;
+            width: 20rem;
+        }
+
+        .button {
+            font-size: 3rem;
+            width: 20rem;
+        }
+
+
+        .form-group {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 4rem;
+            font-size: 3.5rem;
+            color: $white;
+            align-items: center;
+
+            .form-label {
+                width: 30rem;
+            }
+
+            .form-input {
+                width: 30rem;
+                color: $white;
+                background-color: rgba($color: #000000, $alpha: 0);
+                height: 8rem;
+                border: 0;
+                text-align: center;
+            }
+
+            .form-input::placeholder {
+                color: gray;
+                font-size: 3.5rem;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                line-height: 0;
+                
+
+            }
+
+            .form-input:not(:placeholder-shown) {
+                color: $white;
+                font-size: 3.5rem;
+                text-align: center;
+            }
+
+            .form-input:focus {
+                outline: none;
+                border: 0;
+            }
+
+        }
+    }
+}
+
+
+
+
