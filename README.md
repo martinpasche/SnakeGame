@@ -21,7 +21,7 @@ Run the following command:
 
 And inside the ```frontend```:
 
-    npm i
+    npm install react-scripts@4.0.3
 
 
 
