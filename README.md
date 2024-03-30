@@ -1,2 +1,2 @@
 # SnakeGame
-classical snake game
+Classical snake game, with a frontend using ```React``` and a backend using ```Django```.
